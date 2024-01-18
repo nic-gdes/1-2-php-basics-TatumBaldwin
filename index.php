@@ -4,7 +4,7 @@
 $string = "this is a string";
 
 //create a variable integer
-$integer = 6;
+$integer = 20;
 
 //create a variable float
 $float = 0.4;
@@ -14,12 +14,14 @@ $boolean = true;
 
 ?>
 
+
 <!-- create "I love PHP" as a single concatenated sentence-->
 <h1>
     <?php 
     echo "I " . "love " . "PHP" . "!"; 
     ?>
 </h1>
+
 
 <!-- create an array with 4 peices of data -->
 <h2>
@@ -28,13 +30,15 @@ $boolean = true;
     ?>
 </h2>
 
+
 <!-- create a class named car -->
-<p>
     <?php 
     class Car {
+
         //properties
         public $make;
-
+        public $model;
+        
         //set the make of the car
         function set_make($make) {
             $this->make = $make;
@@ -42,16 +46,67 @@ $boolean = true;
         function get_make() {
             return $this->make;
         }
+
+        //set the model of the car
+        function set_model($model) {
+            $this->model = $model;
+        }
+        function get_model() {
+            return $this->model;
+        }
+
+        //set year of the car
+        function set_year($year) {
+            $this->year = $year;
+        }
+        function get_year() {
+            return $this->year;
+        }
     }
 
-    $kia = new Car();
-    $chevy = new Car();
-    $kia->set_make('Kia');
-    $chevy->set_make('Chevy');
+    // make new cars
+    $myCar = new Car();
+ 
+
+    // connect the make
+    $myCar->set_make('Kia');
 
 
-    echo "I have a " . $kia->get_make();
-    echo "<br>";
-    echo "I have a " . $chevy->get_make();
+    // connect the model
+    $myCar->set_model('Sportage');
+
+
+    //connect the year
+    $myCar->set_year('2017');
+
+
+    // post make, model and year of my car
+    // echo "I have a" {{year}} {{make}} {{model}}"  ---- I did not use this method because it was not working;
+    echo "I have a " . $myCar->get_year() . " " . $myCar->get_make() . " " . $myCar->get_model();
     ?>
 
+
+<!-- create a loop to test the integer -->
+<?php
+echo "<br>";
+if ($integer >= 10) {
+    echo "The number is more than 10 :)";
+} else {
+    echo "The number is less than 10 :(";
+};
+
+?>
+
+<!-- create a loop using the array -->
+<?php
+echo "<br>";
+for ($i = 0; $i < count($phparray); $i++) {
+  echo $i;
+  foreach($phparray as $item) {
+    echo $i;
+  }
+}
+
+
+
+?>
