@@ -1,37 +1,38 @@
-<!-- create variables from all 4 data types -->
+<!--Variables 1. create variables from all 4 data types -->
 <?php
-//create a variable string
-$string = "this is a string";
 
-//create a variable integer
-$integer = 20;
+    //create a variable string
+    $string = "this is a string";
 
-//create a variable float
-$float = 0.4;
+    //create a variable integer
+    $integer = 20;
 
-//create a variable boolean
-$boolean = true;
+    //create a variable float
+    $float = 0.4;
+
+    //create a variable boolean
+    $boolean = true;
 
 ?>
 
 
-<!-- create "I love PHP" as a single concatenated sentence-->
+<!--Variables 2. create "I love PHP" as a single concatenated sentence-->
 <h1>
     <?php 
-    echo "I " . "love " . "PHP" . "!"; 
+        echo "I " . "love " . "PHP" . "!"; 
     ?>
 </h1>
 
 
-<!-- create an array with 4 peices of data -->
+<!--Variables 3. create an array with 4 peices of data -->
 <h2>
     <?php 
-    $phparray = [1, 2, 3, 4];
+        $phparray = [1, 2, 3, 4];
     ?>
 </h2>
 
 
-<!-- create a class named car -->
+<!--Variables 4. create a class named car -->
     <?php 
     class Car {
 
@@ -64,7 +65,7 @@ $boolean = true;
         }
     }
 
-    // make new cars
+    // Variables 5. make new cars
     $myCar = new Car();
  
 
@@ -80,13 +81,13 @@ $boolean = true;
     $myCar->set_year('2017');
 
 
-    // post make, model and year of my car
+    // 6. post make, model and year of my car
     // echo "I have a" {{year}} {{make}} {{model}}"  ---- I did not use this method because it was not working;
     echo "I have a " . $myCar->get_year() . " " . $myCar->get_make() . " " . $myCar->get_model();
     ?>
 
 
-<!-- create a loop to test the integer -->
+<!-- Conditionals 1. create an if statement to test the integer -->
 <?php
 echo "<br>";
 if ($integer >= 10) {
@@ -97,7 +98,7 @@ if ($integer >= 10) {
 
 ?>
 
-<!-- create a loop using the array -->
+<!-- Loops 1.  create a loop using the array -->
 <?php
 echo "<br>";
 for ($i = 0; $i < count($phparray); $i++) {
